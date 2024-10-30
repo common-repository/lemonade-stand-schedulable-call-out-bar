@@ -1,0 +1,433 @@
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+	/* Body */
+	body {
+		margin: 0px;
+	}
+	#footer-thankyou {
+		display: none;
+	}
+	/* Interface */
+	.lemonadestand-main {
+    	padding-right: 20px;
+    	padding-top: 20px;
+    	padding-bottom: 20px;
+	}
+	.lemonadestand-full {
+		display: none;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		background-color: #1d2327;
+		align-content: center;
+		justify-content: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		z-index: 9999;
+	}
+	.lemonadestand-board {
+		background-color: #ffffff;
+		max-width: 100%;
+		width: 800px;
+		border: 1px solid #686868;
+	}
+	.lemonadestand-board .button {
+		display: none;
+	}
+	.lemonadestand-scheduleitems {
+		height: 300px;
+		overflow: auto;
+		border: 1px solid #959595;
+		border-radius: 1px;
+	}
+	.lemonadestand-scheduler {
+		z-index: 99999;
+		background-color: #ffffff;
+		color: #000000;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 20px;
+		border-radius: 5px;
+		padding: 15px;
+		width: 150px;
+	}
+	.lemonadestand-scheduleitems * {
+		user-select: none;
+	}
+	.lemonadestand-container .lemonadestand-sortable {
+		background-color: #cfcfcf;
+		display: inline-block;
+		margin-right: 5px;
+		margin-top: 5px;
+		padding: 5px;
+	}
+	.lemonadestand-tools {
+		z-index: 99999;
+		background-color: #ffffff;
+		color: #000000;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 20px;
+		border-radius: 5px;
+		padding: 15px;
+		width: 150px;
+	}
+	.lemonadestand-tools *, .lemonadestand-scheduler * {
+		width: 100%;
+		margin-bottom: 5px !important;
+	}
+	.lemonadestand-tools *:last-child, .lemonadestand-scheduler *:last-child {
+		margin-bottom: 0px !important;
+	}
+	.lemonadestand-data, .lemonadestand-insert, .lemonadestand-board .lemonadestand-schedule, .lemonadestand-frontend .lemonadestand-schedule, .lemonadestand-hidepanel {
+		display: none !important;
+	}
+	.lemonadestand-gallery {
+		display: none;
+		position: fixed;
+    	z-index: 999999;
+    	background-color: #1d2327;
+		overflow: auto;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		text-align: center;
+	}
+	.lemonadestand-gallery img {
+		width: 100px;
+		margin: 40px;
+		filter: drop-shadow(2px 2px 2px #ffffff) grayscale(1);
+		cursor: pointer;
+		-webkit-user-drag: none;
+	}
+	.lemonadestand-gallery img:active {
+		opacity: 0.5;
+	}
+	.lemonadestand-control {
+		resize: none;
+	}
+	.lemonadestand-mobilemessage {
+		display: none;
+		flex-direction: row;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+		background-color: #1d2327;
+		color: #ffffff;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		z-index: 99999;
+		user-select: none;
+	}
+	/* Bar Structure */
+	.lemonadestand-container .lemonadestand-box {
+		margin-top: 40px;
+	}
+	.lemonadestand-container .lemonadestand-boxcontainer {
+		border: 1px solid #c1c1c1;
+	}
+	.lemonadestand-frontend .lemonadestand-notactive, .lemonadestand-frontend .button  {
+		display: none;
+	}
+	.lemonadestand-boxcontainer {
+		display: table;
+		width: 100%;
+	}
+	.lemonadestand-boxcontainer * {
+	    user-select: none;
+		box-sizing: border-box;
+	}
+	.lemonadestand-column {
+		display: table-cell;
+		vertical-align: middle;
+    	padding: 5px;
+    	text-align: center;
+	}
+	.lemonadestand-frontend .lemonadestand-column {
+		font-size: 0px !important;
+	}
+	.lemonadestand-imagepanel {
+		width: 80px;
+	}
+	.lemonadestand-imagebox {
+		width: 70px;
+		height: 70px;
+		object-fit: contain;
+		filter: brightness(1.2) grayscale(1);
+		mix-blend-mode: hard-light;
+		-webkit-user-drag: none;
+	}
+	.lemonadestand-main .lemonadestand-imagebox {
+		margin-bottom: -4px;
+	}
+	.lemonadestand-subheader {
+	    color: #ffffff;
+	}
+	.lemonadestand-subheader {
+	    font-family: 'Roboto', sans-serif;
+	    font-size: 12px;
+	    text-transform: uppercase;
+	    letter-spacing: 5px;
+	}
+	.lemonadestand-buttonpanel {
+		width: 150px;
+	}
+	.lemonadestand-solidbutton {
+	    color: #ffffff;
+	}
+	.lemonadestand-solidbutton {
+	    display: inline-block;
+	    width: 130px;
+	    text-align: center;
+	    padding: 7px;
+	    font-size: 12px;
+	    font-family: 'Roboto', sans-serif;
+	    text-transform: uppercase;
+	    letter-spacing: 3px;
+	}
+	.lemonadestand-boxcontainer, .lemonadestand-solidbutton {
+		overflow: hidden;
+	}
+	.lemonadestand-success {
+		background-color: #97efbe;
+	}
+	.lemonadestand-selectthis {
+		color: #ffffff;
+		background-color: #2271b1;
+	}
+	/* Hue Rotate */
+	.lemonadestand-hue0 {
+		filter: hue-rotate(0deg);
+	}
+	.lemonadestand-hue18 {
+		filter: hue-rotate(18deg);
+	}
+	.lemonadestand-hue36 {
+		filter: hue-rotate(36deg);
+	}
+	.lemonadestand-hue54 {
+		filter: hue-rotate(54deg);
+	}
+	.lemonadestand-hue72 {
+		filter: hue-rotate(72deg);
+	}
+	.lemonadestand-hue90 {
+		filter: hue-rotate(90deg);
+	}
+	.lemonadestand-hue108 {
+		filter: hue-rotate(108deg);
+	}
+	.lemonadestand-hue126 {
+		filter: hue-rotate(126deg);
+	}
+	.lemonadestand-hue144 {
+		filter: hue-rotate(144deg);
+	}
+	.lemonadestand-hue162 {
+		filter: hue-rotate(162deg);
+	}
+	.lemonadestand-hue180 {
+		filter: hue-rotate(180deg);
+	}
+	.lemonadestand-hue198 {
+		filter: hue-rotate(198deg);
+	}
+	.lemonadestand-hue216 {
+		filter: hue-rotate(216deg);
+	}
+	.lemonadestand-hue234 {
+		filter: hue-rotate(234deg);
+	}
+	.lemonadestand-hue252 {
+		filter: hue-rotate(252deg);
+	}
+	.lemonadestand-hue270 {
+		filter: hue-rotate(270deg);
+	}
+	.lemonadestand-hue288 {
+		filter: hue-rotate(288deg);
+	}
+	.lemonadestand-hue306 {
+		filter: hue-rotate(306deg);
+	}
+	.lemonadestand-hue324 {
+		filter: hue-rotate(324deg);
+	}
+	.lemonadestand-hue342 {
+		filter: hue-rotate(342deg);
+	}
+	.lemonadestand-hue360 {
+		filter: hue-rotate(360deg);
+	}
+	/* Colors */
+	.lemonadestand-backgroundcolor1 {
+		background: #a92b2b;
+	}
+	.lemonadestand-backgroundcolor1 .lemonadestand-imagepanel {
+		background: #ff7878;
+	}
+	.lemonadestand-backgroundcolor1 .lemonadestand-solidbutton {
+	    background-color: #ff7878;
+	}
+	.lemonadestand-backgroundcolor2 {
+		background: linear-gradient(90DEG, #ff7878, #a92b2b);
+	}
+	.lemonadestand-backgroundcolor2 .lemonadestand-solidbutton {
+	    background-color: #ff7878;
+	}
+	.lemonadestand-backgroundcolor3 {
+		background: #a92b2b;
+	}
+	.lemonadestand-backgroundcolor3 .lemonadestand-imagepanel {
+		background: #2778f7;
+	}
+	.lemonadestand-backgroundcolor3 .lemonadestand-solidbutton {
+	    background-color: #2778f7;
+	}
+	.lemonadestand-backgroundcolor4 {
+		background: linear-gradient(90DEG, #2778f7, #a92b2b);
+	}
+	.lemonadestand-backgroundcolor4 .lemonadestand-solidbutton {
+	    background-color: #2778f7;
+	}
+	.lemonadestand-backgroundcolor5 {
+		background: #a92b2b;
+	}
+	.lemonadestand-backgroundcolor5 .lemonadestand-imagepanel {
+		background: #20c16e;
+	}
+	.lemonadestand-backgroundcolor5 .lemonadestand-solidbutton {
+	    background-color: #20c16e;
+	}
+	.lemonadestand-backgroundcolor6 {
+		background: linear-gradient(90DEG, #20c16e, #a92b2b);
+	}
+	.lemonadestand-backgroundcolor6 .lemonadestand-solidbutton {
+	    background-color: #20c16e;
+	}
+	.lemonadestand-backgroundcolor7 {
+		background: #2e2e2e;
+	}
+	.lemonadestand-backgroundcolor7 .lemonadestand-imagepanel {
+		background: #eb4c4c;
+	}
+	.lemonadestand-backgroundcolor7 .lemonadestand-solidbutton {
+	    background-color: #eb4c4c;
+	}
+	.lemonadestand-backgroundcolor8 {
+		background: linear-gradient(90DEG, #eb4c4c, #2e2e2e);
+	}
+	.lemonadestand-backgroundcolor8 .lemonadestand-solidbutton {
+	    background-color: #eb4c4c;
+	}
+	.lemonadestand-backgroundcolor9 {
+		background: #a92b2b;
+	}
+	.lemonadestand-backgroundcolor9 .lemonadestand-imagepanel {
+		background: #d9a037;
+	}
+	.lemonadestand-backgroundcolor9 .lemonadestand-solidbutton {
+	    background-color: #d9a037;
+	}
+	.lemonadestand-backgroundcolor10 {
+		background: linear-gradient(90DEG, #d9a037, #a92b2b);
+	}
+	.lemonadestand-backgroundcolor10 .lemonadestand-solidbutton {
+	    background-color: #d9a037;
+	}
+	.lemonadestand-backgroundcolor11 {
+		background: linear-gradient(360deg, #f7f7f7, #ffffff);
+	}
+	.lemonadestand-backgroundcolor11 .lemonadestand-subheader {
+		color: #a92b2b;
+	}
+	.lemonadestand-backgroundcolor11 .lemonadestand-imagepanel {
+		background: #ff7878;
+	}
+	.lemonadestand-backgroundcolor11 .lemonadestand-solidbutton {
+	    background-color: #ff7878;
+	}
+	.lemonadestand-backgroundcolor12 {
+		background: linear-gradient(270deg, #f7f7f7, #ffc3c3);
+	}
+	.lemonadestand-backgroundcolor12 .lemonadestand-subheader {
+		color: #a92b2b;
+	}
+	.lemonadestand-backgroundcolor12 .lemonadestand-imagepanel {
+		background: #ff7878;
+	}
+	.lemonadestand-backgroundcolor12 .lemonadestand-solidbutton {
+	    background-color: #ff7878;
+	}
+	/* Rotating */
+	@keyframes lemonadestand-rotating {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+	.lemonadestand-frontend .lemonadestand-rotating .lemonadestand-imagebox, .lemonadestand-board .lemonadestand-rotating .lemonadestand-imagebox {
+		animation: lemonadestand-rotating 3s linear infinite;
+	}
+	/* Wobble */
+	@keyframes lemonadestand-wobble {
+		0% {
+			transform: rotate0deg;
+		}
+		25% {
+			transform: rotate(30deg);
+		}
+		50% {
+			transform: rotate(0deg);
+		}
+		75% {
+			transform: rotate(-30deg);
+		}
+	}
+	.lemonadestand-frontend .lemonadestand-wobble .lemonadestand-imagebox, .lemonadestand-board .lemonadestand-wobble .lemonadestand-imagebox {
+		animation: lemonadestand-wobble 2s linear infinite;
+	}
+	/* Button Radius */
+	.lemonadestand-norounding .lemonadestand-solidbutton {
+		border-radius: 0px;
+	}
+	.lemonadestand-halfrounding .lemonadestand-solidbutton {
+		border-top-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}
+	.lemonadestand-fullrounding .lemonadestand-solidbutton {
+		border-radius: 30px;
+	}
+	.lemonadestand-tilted .lemonadestand-solidbutton {
+		transform: skew(-15deg, 0deg);
+	}
+	/* Responsive */
+	@media only screen and (max-width: 600px) {
+		.lemonadestand-boxcontainer .lemonadestand-buttonpanel {
+			display: none;
+		}
+		.lemonadestand-boxcontainer .lemonadestand-imagepanel {
+			width: 50px;
+		}
+		.lemonadestand-boxcontainer .lemonadestand-imagebox {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	@media only screen and (max-width: 980px) {
+		body {
+			overflow: hidden;
+		}
+		.lemonadestand-mobilemessage {
+			display: flex;
+		}
+	}
